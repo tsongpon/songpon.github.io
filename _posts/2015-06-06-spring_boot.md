@@ -6,9 +6,9 @@ title: Microservices with Spring Boot
 Microservices with Spring Boot
 =========================
 
-Nowadays microservices is becoming a popular architecture style. One of famous way that use to implement microservices is create service as a RESTFul API. 
+Nowadays microservices is becoming a popular architecture style. One of famous way that use to implement microservices is create service as a RESTFul API.
 
-There are many frameworks that let us to create a RESTFul API easily by provide set of method and/or library that you can call for accomplishing a basic RESTFul API function like handle http request, json serialisation, json deserialisation, etc. 
+There are many frameworks that let us to create a RESTFul API easily by provide set of method and/or library that you can call for accomplishing a basic RESTFul API function like handle http request, json serialisation, json deserialisation, etc.
 
 One of famous microservices framework is spring boot with spring boot you just create a few class (or just one class) and build it into single jar file, spring boot will embed tomcat(as default) into your jar, you just run that jar with simple *java -jar* command and then you will have RESTFul API up and running. Spring boot support dependencies injection out of the box.
 
@@ -26,8 +26,8 @@ let explore our pom.xml a bit, our pom used spring's spring-boot-starter-parent 
             <artifactId>spring-boot-starter-parent</artifactId>
             <version>1.2.1.RELEASE</version>
          </parent>
-        
-This allow out project just declare only one dependencies 
+
+This allow out project just declare only one dependencies
 
          <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -88,14 +88,14 @@ after build you will find our application package *springbootblog-1.0-SNAPSHOT.j
 Use this command to run our application.
 
         java -jar target/springbootblog-1.0-SNAPSHOT.jar
-Now you will have service up and running at 
+Now you will have service up and running at
 
         http://localhost:8080/
 some of you might already open this url with web browser and found some kind of error page because this is not how our service suppose to use.
 
 **test our RESTFul API**
 
-Working with RESTFul API you need rest client to interact with RESTFul API I suggest [postman](http://www.getpostman.com) 
+Working with RESTFul API you need rest client to interact with RESTFul API I suggest [postman](http://www.getpostman.com)
 
 get all blog : to get all blog from service you can use rest client to make request with GET method to this url
 
