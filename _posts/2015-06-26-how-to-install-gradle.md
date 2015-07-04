@@ -12,6 +12,7 @@ Gradle is automate build tools/dependency management  build on concept of Maven 
 
 ## Download Gradle
 You can download Gradle [here](https://services.gradle.org/distributions/gradle-2.4-all.zip)
+
 ## Install Gradle
 After download finish you will get one zip file on your download directory file name will look like gradle-x.x-all.zip (x.x is version number) to install Gradle you need to
 
