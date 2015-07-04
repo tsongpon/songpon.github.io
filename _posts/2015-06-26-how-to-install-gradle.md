@@ -20,14 +20,19 @@ After download finish you will get one zip file on your download directory file 
 2. Move directory from 1. to appropriate location, in our case I will move to `/usr/local/` ,so after move I will have directory `/usr/local/gradle` on my machine
 3. To be able to run gradle in everywhere we need to add Gradle directory on our `PATH` variable by open `~/.profile` (I am on mac OSX) with your prefer text editor in this case I will use vim
 
-        vim ~/.profile
+ `vim ~/.profile`
+
 append this two lines
 
-       export GRADLE_HOME=/usr/local/gradle
-       export PATH=$PATH:$GRADLE_HOME/bin
+{% highlight text %}
+export GRADLE_HOME=/usr/local/gradle
+export PATH=$PATH:$GRADLE_HOME/bin
+{% endhighlight %}
+
 save the file and use `source` command to reload new environment variable
 
        source ~/.profile
+
 (in some case you need to open new terminal session after `source`)
 
 ## Test Your Installation
