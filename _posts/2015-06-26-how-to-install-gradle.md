@@ -31,13 +31,14 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
 save the file and use `source` command to reload new environment variable
 
-       source ~/.profile
+`source ~/.profile`
 
 (in some case you need to open new terminal session after `source`)
 
 ## Test Your Installation
 You can test your gradle Installation by run this command `gradle --v` if your Installation is correct you will get result look like this
 
+{% highlight text %}
     ------------------------------------------------------------
     Gradle 2.4
     ------------------------------------------------------------
@@ -50,3 +51,4 @@ You can test your gradle Installation by run this command `gradle --v` if your I
     Ant:          Apache Ant(TM) version 1.9.4 compiled on April 29 2014
     JVM:          1.8.0_45 (Oracle Corporation 25.45-b02)
     OS:           Mac OS X 10.10.4 x86_64
+{% endhighlight %}
