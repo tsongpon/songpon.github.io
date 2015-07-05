@@ -14,7 +14,7 @@ Gradle is automate build tools/dependency management  build on concept of Maven 
 You can download Gradle [here](https://services.gradle.org/distributions/gradle-2.4-all.zip)
 
 ## Install Gradle
-After download finish you will get one zip file on your download directory file name will look like gradle-x.x-all.zip (x.x is version number) to install Gradle you need to
+After download finish you will get one zip file on your download directory. The File name will look like gradle-x.x-all.zip (x.x is version number) to install Gradle you need to
 
 1. Extract (unzip) gradle zip file, in our case I will extract zip file to be a directory name `gradle`
 2. Move directory from 1. to appropriate location, in our case I will move to `/usr/local/` ,so after move I will have directory `/usr/local/gradle` on my machine
