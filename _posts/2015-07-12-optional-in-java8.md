@@ -38,3 +38,24 @@ Optional<Person> optPerson = Optional.ofNullable(person);
 {% endhighlight %}
 
 #### Extract value from Optional
+The Optional class provides several instance methods to read the value contained by an Optional instance.
+
+**get()**
+
+The silplest way to get wrapped value from `Optional` by calling
+
+{% highlight java %}
+Person aPerson = optPerson.get();
+{% endhighlight %}
+
+You will get person object return if it present, but throws a `NoSuchElementException` otherwise. For thsi resaon I think it a bad idea to use `get()` to extract your object from Optional unless you’re really sure the optional contains a value.
+
+**orElse(T other)**
+
+This method allows you to provide a default value for when the optional doesn’t contain a value.
+
+{% highlight java %}
+Person aPerson = optPerson.orElse(anotherPerson);
+{% endhighlight %}
+
+From code above `optPerson` will return wrapped value if present otherwise return `anotherPerson`.
