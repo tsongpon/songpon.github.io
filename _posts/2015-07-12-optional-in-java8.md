@@ -18,40 +18,40 @@ Java 8 introduce `java.util.Optional<T>`, a container object which may or may no
 There are many ways to create `Optional` class.
 
 ##### Empty Optional
-You can create empty Optional object (Optional that contain nothing) by call static factory method `Optional.empty`
+You can create empty `Optional` object (Optional that contain nothing) by call static factory method `Optional.empty`
 
 {% highlight java %}
 Optional<Person> optPerson = Optional.empty();
 {% endhighlight %}
 
 ##### Optional from none-null value
-If you want to create Option from your object and you are 100% sure that your object is not null. You can use static factory method `Optional.of`
+If you want to create `Optional` from your object and you are 100% sure that your object is not `null`. You can use static factory method `Optional.of`
 
 {% highlight java %}
 Optional<Person> optPerson = Optional.of(person);
 {% endhighlight %}
 
-If `person` is `null` `NullPointerException` will be immediately thrown (rather than throw when client code try to use `person` in somewhere else)
+If `person` is `null` `NullPointerException` will be immediately thrown (rather than throw latter when client code try to use `person` in somewhere else)
 
 ##### Optional from null able value
-If you want to create Optional that may cotain `null` value, you can call static factory method `Optional.ofNullable`
+If you want to create `Optional` that may contain `null` value, you can call static factory method `Optional.ofNullable`
 
 {% highlight java %}
 Optional<Person> optPerson = Optional.ofNullable(person);
 {% endhighlight %}
 
 #### Extract value from Optional
-The Optional class provides several instance methods to read the value contained by an Optional instance.
+The `Optional` class provides several instance methods to read the value contained by an Optional instance.
 
 *get()*
 
-The silplest way to get wrapped value from `Optional` by calling
+The simplest way to get wrapped value from `Optional` by calling
 
 {% highlight java %}
 Person aPerson = optPerson.get();
 {% endhighlight %}
 
-You will get person object return if it present, but throws a `NoSuchElementException` otherwise. For thsi resaon I think it a bad idea to use `get()` to extract your object from Optional unless you’re really sure the optional contains a value.
+You will get person object return if it present, but throws a `NoSuchElementException` otherwise. For this reason I think it's bad idea to use `get()` to extract your object from `Optional` unless you’re really sure the optional contains a value.
 
 *orElse(T other)*
 
