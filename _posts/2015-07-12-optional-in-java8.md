@@ -4,15 +4,18 @@ title: Optional in Java8
 comments: true
 ---
 
+Java 8 Optional inspired by another functional languages such as Haskell. Haskell includes a Maybe type, which essentially encapsulates an optional value. A value of type Maybe can contain either a value of a given type or nothing. There’s no concept of a null reference in Haskell.
+
 ## Problem with null
-- It's source of error `NullPointerException` the most common Exception in Java, it happen when we use dot operator (.) with null reference.
-- It bloats your code to prevent `NullPointerException` we have to have null check, it worsens readability.
-- It’s meaningless it doesn’t have any semantic meaning, and in particular it represents the wrong way to model the absence of a value in a statically typed language.
+- It's source of error : `NullPointerException` the most common Exception in Java, it happen when we use dot operator (.) with null reference.
+- It bloats your code : to prevent `NullPointerException` we have to have null check, it worsens readability.
+- It’s meaningless : it doesn’t have any semantic meaning, and in particular it represents the wrong way to model the absence of a value in a statically typed language.
 
 ## Introduce to Optional class
 Java 8 introduce `java.util.Optional<T>`, a container object which may or may not contain a non-null value. We use this `Optional` to wrap the object that can be null so client can has a better way to handle with null able value.
 
 #### Creating Optional objects
+There are many ways to create `Optional` class.
 
 ##### Empty Optional
 You can create empty Optional object (Optional that contain nothing) by call static factory method `Optional.empty`
