@@ -4,7 +4,7 @@ title: How to Install Gradle
 comments: true
 ---
 
-Gradle is automate build tools/dependency management  build on concept of Maven and Apache ant and uses Groovy-based domain-specific language (DSL) instead of the more traditional XML form of declaring the project configuration this make Gradle become a powerful tool. This post will introduce you how to install Gradle on your machile.
+Gradle is automate build tools/dependency management  build on concept of Maven and Apache ant and uses Groovy-based domain-specific language (DSL) instead of the more traditional XML form of declaring the project configuration this make Gradle become a powerful tool. This post will introduce you how to install Gradle on your machine.
 
 ## Prerequisite
 - JDK : You need Jave Development Kit(JDK) installed on your machine.
