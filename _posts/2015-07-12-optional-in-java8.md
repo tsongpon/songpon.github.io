@@ -40,7 +40,7 @@ Optional<Person> optPerson = Optional.ofNullable(person);
 #### Extract value from Optional
 The Optional class provides several instance methods to read the value contained by an Optional instance.
 
-**get()**
+*get()*
 
 The silplest way to get wrapped value from `Optional` by calling
 
@@ -50,7 +50,7 @@ Person aPerson = optPerson.get();
 
 You will get person object return if it present, but throws a `NoSuchElementException` otherwise. For thsi resaon I think it a bad idea to use `get()` to extract your object from Optional unless you’re really sure the optional contains a value.
 
-**orElse(T other)**
+*orElse(T other)*
 
 This method allows you to provide a default value for when the optional doesn’t contain a value.
 
@@ -59,3 +59,38 @@ Person aPerson = optPerson.orElse(anotherPerson);
 {% endhighlight %}
 
 From code above `optPerson` will return wrapped value if present otherwise return `anotherPerson`.
+
+*orElseGet(Supplier<? extends T> other)*
+
+`orElseGet(Supplier<? extends T> other)` is the lazy counterpart of the `orElse` method, because the supplier is invoked only if the optional contains no value. You should use this method either when the default value is time-consuming to create (to gain a little efficiency) or you want to be sure this is done only if the
+optional is empty (in which case it’s strictly necessary).
+
+{% highlight java %}
+Person aPerson = optPerson.orElseGet(() -> expensiveCall());
+{% endhighlight %}
+
+From code above `expensiveCall()` will be executed if wrapped value in `optPerson` is not present.
+
+*orElseGet(Supplier<? extends T> other)*
+
+is similar to the get method in that it throws an exception when the optional is empty, but in this case it allows you to choose the type of exception that you want to throw.
+
+{% highlight java %}
+Person aPerson = optPerson.orElseThrow(() -> new SomeException("Some message"));
+{% endhighlight %}
+
+`SomeException` will throw if `optPerson` is empty.
+
+*ifPresent(Consumer<? super T> consumer)*
+
+lets you execute the action given as argument if a value is present; otherwise no action is taken.
+
+{% highlight java %}
+Person aPerson = optPerson.ifPresent(e -> {
+    //some action with e
+  });
+{% endhighlight %}
+
+#### References
+- [Java 8 in Action](http://www.manning.com/urma/)
+- [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
