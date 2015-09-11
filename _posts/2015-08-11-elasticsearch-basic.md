@@ -12,7 +12,7 @@ Elasticsearch is open source search engine written in Java. Elasticsearch is ver
 - Run `bin/elasticsearch`
 - Go to `http://localhost:9200/` to Elasticsearch status, if everything OK you will get response like this
 
-{% highlight %}
+```json
 {
 	status: 200,
 	name: "Blackwing",
@@ -26,4 +26,4 @@ Elasticsearch is open source search engine written in Java. Elasticsearch is ver
 	},
 	tagline: "You Know, for Search"
 }
-{% endhighlight %}
+```
